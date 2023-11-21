@@ -1,8 +1,5 @@
 # Semi-automated C/C++ makefile
 
-# This should be all you need to change
-TARGETS = stealthgame drawtest boxbounce test
-
 # Header files go here
 INCDIR = include/
 # C/C++ files go here
@@ -18,7 +15,7 @@ TESTDIR = tests/
 
 LINKS = SDL2 SDL2main SDL2_image
 
-CPPOPTS_ALWAYS = -pedantic -Wall -Wextra -std=c++17
+CPPOPTS_ALWAYS = -pedantic -Wall -Wextra -std=c++20
 CPPOPTS_DEBUG = -O0 -g -Wno-unused-parameter -Wno-unused-variable
 CPPOPTS_RELEASE = -O2 -flto
 LINKOPTS_ALWAYS = $(foreach link,$(LINKS),-l$(link))
